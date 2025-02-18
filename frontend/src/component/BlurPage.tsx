@@ -131,7 +131,7 @@ function joinroom(){
    }
     
   
-    const ws:any=new WebSocket("http://localhost:8080")
+    const ws:any=new WebSocket("https://chatsphere-9c5w.onrender.com")
     setWss(ws)
     ws.onopen=()=>{
         ws.send(JSON.stringify({
