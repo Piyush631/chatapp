@@ -130,8 +130,9 @@ function joinroom(){
     return;
    }
     
-  
-    const ws:any=new WebSocket("https://chatsphere-9c5w.onrender.com")
+  // http://localhost:8080 
+  //https://chatsphere-9c5w.onrender.com
+    const ws:any=new WebSocket("https://chatsphere-9c5w.onrender.com")  
     setWss(ws)
     ws.onopen=()=>{
         ws.send(JSON.stringify({
@@ -148,7 +149,7 @@ function joinroom(){
 }
     return (
         <div
-            className="min-h-screen  max-h-auto  w-full flex  flex-col  lg:flex-row gap-3 items-center justify-center"
+            className="min-h-screen    max-h-auto  w-full flex  flex-col  lg:flex-row gap-3 items-center justify-center"
             style={{
                 backgroundImage: `url(${BlurImage})`,
                 backgroundSize: 'cover',
@@ -197,7 +198,7 @@ function joinroom(){
 
                     </div>
                     
-                    <div className='text-xs w-[215px] py-4  text-gray-800 leading-3.5'>It is a long established fact that a reader will be distracted by the readable </div>
+                    <div className='text-xs w-[215px] py-4 font-regular text-gray-800 leading-3.5'> Connect with friends worldwide, share moments, spark conversations, and enjoy life. </div>
       
                 </div>
                 </div>
@@ -236,7 +237,7 @@ function joinroom(){
                       
                         <div>India</div>
                     </div>
-                    <div className='text-lg text-gray-800'>ChatSphere</div>
+                    <div className='text-lg  font-medium text-gray-800'>ChatSphere</div>
                     </div>
                     <div className='  p-4 h-full flex flex-col justify-end items-end'>
 

@@ -174,7 +174,7 @@ setRoomid(" ")
             } </div>)}
             
                 </div>
-                <div className="    rounded-b-2xl h-20 pt-4 bg-[#AE9B86] flex  items-center px-1 pb-1 gap-2">
+                <div className="    rounded-b-2xl h-20 pt-4 bg-[#AE9B86]  flex  items-center px-1 pb-1 gap-2">
                   <label htmlFor="file" className="text-3xl"> 
                   <CiImageOn />
                   <input type="file" id="file" style={{display:'none'}} onChange={sendImage} accept="image/jpg,image/png,image/jpeg,image/gif"/>
