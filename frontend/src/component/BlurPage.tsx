@@ -217,7 +217,7 @@ function joinroom(){
                     </div>
                    
                 <div className='flex justify-end p-3 ' >
-                    <button className='text-gray-600 h-7  px-1.5  hover:bg-gray-300 font-semibold rounded-full bg-white cursor-pointer' onClick={generateid}>Generate Room</button>
+                    <button className='text-gray-600 h-8 px-3 hover:bg-gray-300 font-semibold rounded-full bg-white cursor-pointer' onClick={generateid}>Generate Room</button>
                 </div>
                 </div>
 

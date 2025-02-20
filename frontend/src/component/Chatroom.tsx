@@ -8,7 +8,7 @@ import {  useNavigate } from "react-router-dom";
 
 export function ChatRoom(){
     const[name,setname]=useRecoilState(username)
-    const[,setRoomid]=useRecoilState(roomname)
+    const[Roomid,setRoomid]=useRecoilState(roomname)
     const[wss,]:any=useRecoilState(wssocket)
   const[color,setColor]=useState(" ")
     const [messages, setMessages] = useState<{
@@ -113,10 +113,14 @@ setRoomid(" ")
               <div className="h-11 w-11  rounded-full">
                 <img src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-cartoon-color-simple-male-avatar-png-image_5230557.jpg" className="rounded-full h-10 w-10"/>
               </div>
+              <div className="flex flex-col gap-0 leading-5">
               <div className="text-white">{name}</div>
+              <div className="text-white ">{Roomid}</div>
+              </div>
+              
             </div>
             <div className="flex items-center">
-              <button  onClick={leaveroom} className="bg-white cursor-pointer p-1 px-1.5 text-sm font-medium rounded-2xl ">Leave room</button>
+              <button  onClick={leaveroom} className="bg-white cursor-pointer py-1.5 px-2 text-sm font-medium rounded-2xl ">Leave room</button>
             </div>
             
             
@@ -133,7 +137,7 @@ setRoomid(" ")
          <div  className="bg-[#AEA28D] p-1  min-w-5 h-auto  rounded-l-2xl rounded-t-2xl mt-1 max-w-64 ">
            <div className="break-all line-clamp-none"> 
            
-          <span className=" leading-5 line-clamp-none">{m.message}
+          <span className=" leading-5 px-1.5  py-1 line-clamp-none">{m.message}
             
             
             </span> 
@@ -158,7 +162,7 @@ setRoomid(" ")
             {m.user}
             </div>
   
-         <span className="leading-none line-clamp-none">   {m.message} </span> 
+         <span className="leading-none line-clamp-none px-1.5  py-1 ">   {m.message} </span> 
        
          </div> 
          {m.image && <img src={m.image}  height={70} width={140}/>} 
